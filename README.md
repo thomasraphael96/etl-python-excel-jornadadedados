@@ -1,38 +1,60 @@
-# ETL Python Excel - Jornada de Dados
+# Validador de Planilhas de Vendas  
 
-Este projeto é uma demonstração prática de um processo ETL (Extract, Transform, Load) utilizando Python para manipulação de dados em arquivos Excel. Ele foi desenvolvido como parte da Jornada de Dados, com o objetivo de ensinar conceitos fundamentais de engenharia de dados.
+Este projeto é um validador de dados de planilhas CSV utilizando **Python**, **Pandas**, **Pydantic** e **Streamlit**. Ele verifica se os dados de um arquivo seguem um formato esperado e reporta eventuais erros, garantindo a integridade das informações antes de seu uso.  
 
-## Funcionalidades
+## Funcionalidades  
 
-- Extração de dados de arquivos Excel.
-- Transformação de dados utilizando bibliotecas Python.
-- Carregamento dos dados transformados em um formato final.
+- **Upload de arquivos CSV** via interface web  
+- **Validação automática** de cada linha da planilha com regras definidas no Pydantic  
+- **Exibição de erros** encontrados durante a validação  
+- **Download dos dados validados** em um novo arquivo CSV
+- **Dashboard interativo para análise de KPIs** usando Streamlit e Plotly
 
-## Tecnologias Utilizadas
+## Tecnologias utilizadas  
 
-- Python
-- Pandas
-- OpenPyXL
+- [Python](https://www.python.org/)  
+- [Pandas](https://pandas.pydata.org/)  
+- [Streamlit](https://streamlit.io/)  
+- [Pydantic](https://docs.pydantic.dev/latest/)  
 
-## Como Executar
+## Como executar o projeto  
 
-1. Clone este repositório:
-    ```bash
-    git clone https://github.com/lvgalvao/etl-python-excel-aovivo.git
-    ```
-2. Instale as dependências:
-    ```bash
-    pip install -r requirements.txt
-    ```
-3. Execute o script principal:
-    ```bash
-    python main.py
-    ```
+1. Clone este repositório:  
+```bash
+git clone https://github.com/thomasraphael96/etl-python-excel-jornadadedados.git
+cd etl-python-excel-jornadadedados
+```
 
-## Contribuição
+2. Instale as dependências:  
+```bash
+pip install -r requirements.txt
+```
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+3. Execute a aplicação Streamlit:
+- Validador de CSV
+```bash
+streamlit run aplicacao_completa.py
+```
+- Dashboard interativo
+```bash
+streamlit run app_dashboard.py
+```
 
-## Licença
+4. Acesse no navegador:  
+```
+http://localhost:8501
+```
 
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
+## 📂 Estrutura do projeto  
+
+```
+etl-python-excel-jornadadedados/
+│── aplicacao_completa.py  # Interface Streamlit para upload e validação
+│── validador.py           # Lógica de validação usando Pydantic
+│── requirements.txt       # Dependências do projeto
+└── README.md              # Documentação do projeto
+```
+
+## 📌 Contribuição  
+
+Sinta-se à vontade para abrir **issues** ou enviar **pull requests** com melhorias. 🚀  
